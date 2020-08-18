@@ -179,12 +179,9 @@ push "route 192.168.2.0 255.255.255.0"
 ```
 ## 5 客户端配置
 ### 5.1 客户端下载并安装
-```
-# win7客户端
-https://my-bucket-torey.s3.cn-northwest-1.amazonaws.com.cn/openvpn/openvpn-install-2.4.9-I601-Win7.exe
-# win10客户端
-https://my-bucket-torey.s3.cn-northwest-1.amazonaws.com.cn/openvpn/openvpn-install-2.4.9-I601-Win10.exe
-```
+在OpenVPN官网下载对应的客户端，并进行安装
+<br>https://openvpn.net/community-downloads/
+
 ### 5.2 客户端配置
 ```
 # 从vpn server中下载如下几个文件，拷贝到客户端安装目录下的config文件夹
