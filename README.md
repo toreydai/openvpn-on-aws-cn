@@ -4,9 +4,10 @@ Deploy OpenVPN on AWS China Region
 本文仅供参考和个人学习使用。
 
 ## 1.部署架构
-
+![avatar](https://github.com/toreydai/openvpn-on-aws-cn/blob/master/images/vpn01.jpg)
 ## 2.创建基础环境
-
+基础环境总体配置信息如下：
+![avatar](https://github.com/toreydai/openvpn-on-aws-cn/blob/master/images/vpn02.jpg)
 ###  2.1 创建VPC，子网及安全组
 参照Amazon VPC官方文档，创建VPC，子网及安全组
 <br>https://docs.aws.amazon.com/zh_cn/vpc/latest/userguide/VPC_wizard.html
@@ -203,13 +204,13 @@ comp-lzo
 修改完成后重命名为client1.ovpn
 ```
 ### 5.3 客户端测试
-```
+
 打开VPN客户端，连接成功
+<br>![avatar](https://github.com/toreydai/openvpn-on-aws-cn/blob/master/images/vpn04.jpg)
+<br>进行网络连通性测试
+<br>![avatar](https://github.com/toreydai/openvpn-on-aws-cn/blob/master/images/vpn05.jpg)
+### 至此，OpenVPN通过证书认证方式已经测试成功，如需通过账号密码方式进行认证，请参考本文剩余章节。
 
-进行网络连通性测试
-
-至此，OpenVPN通过证书认证方式已经测试成功，如需通过账号密码方式进行认证，请参考本文剩余章节。
-```
 ## 6 配置使用账号密码认证方式登陆
 
 ### 6.1 修改服务器端设置
@@ -294,12 +295,14 @@ auth-user-pass
 ### 6.5 客户端测试
 
 使用配置好的用户名密码登陆VPN客户端
-
-VPN连接成功
-
-进行网络连通性测试
-
-## 7 参考链接：
+<br>![avatar](https://github.com/toreydai/openvpn-on-aws-cn/blob/master/images/vpn03.jpg)
+<br>VPN连接成功
+<br>![avatar](https://github.com/toreydai/openvpn-on-aws-cn/blob/master/images/vpn04.jpg)
+<br>进行网络连通性测试
+<br>![avatar](https://github.com/toreydai/openvpn-on-aws-cn/blob/master/images/vpn05.jpg)
+## 7 配置文件参考
+VPN Server配置文件server.conf，及客户端配置文件client1.ovpn，参考附件。
+## 8 参考链接：
 centos配置国内源：
 <br>https://mirrors.cnnic.cn/help/centos/
 <br>openvpn配置参考步骤：
