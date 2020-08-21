@@ -173,9 +173,10 @@ vi /etc/openvpn/server/server.conf
 添加需要连通的VPC2子网的路由：
 push "route 192.168.2.0 255.255.255.0"
 ```
-### 4.2 VPC2中子网路由
+### 4.2 VPC中子网路由
 ```
-添加1条Destination为10.8.0.0/24 Target为VPN server的路由
+VPC1和VPC2中，均需要添加1条Destination为10.8.0.0/24 Target为VPN server的路由
+
 ```
 ## 5 客户端配置
 ### 5.1 客户端下载并安装
